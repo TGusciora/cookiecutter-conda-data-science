@@ -21,8 +21,8 @@ Please read [install.md](install.md) for details on how to set up this project.
     ├── models             <- Trained and serialized models, model predictions, or model summaries.
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    │                         the creator's initials (or id), and a short `-` delimited description, e.g.
+    │                         `01-tg-initial-data-exploration`.
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
@@ -37,25 +37,27 @@ Please read [install.md](install.md) for details on how to set up this project.
     ├── setup.py           <- Makes project pip installable (pip install -e .)
     │                         so {{ cookiecutter.project_module_name }} can be imported.
     │
-    └── {{ cookiecutter.project_module_name }}               <- Source code for use in this project.
+    └── source_codes               <- Source code for use in this project.
         ├── __init__.py    <- Makes {{ cookiecutter.project_module_name }} a Python module.
         │
-        ├── data           <- Scripts to download or generate data.
+        ├── data           <- Scripts to download, import or generate data.
         │   └── make_dataset.py
         │
         ├── features       <- Scripts to turn raw data into features for modeling.
         │   └── build_features.py
+        │   └── features_scoring.py		
         │
         ├── models         <- Scripts to train models and then use trained models to make
         │   │                 predictions.
         │   ├── predict_model.py
         │   └── train_model.py
+        │   └── hyperparameters_model.py		
         │
         ├── utils          <- Scripts to help with common tasks.
             └── paths.py   <- Helper functions to relative file referencing across project.
         │
-        └── visualization  <- Scripts to create exploratory and results oriented visualizations.
-            └── visualize.py
+        └── explore_visualise  <- Scripts to create exploratory and results oriented visualizations.
+            └── eda.py
 
 ---
 Project based on the [cookiecutter conda data science project template](https://github.com/jvelezmagic/cookiecutter-conda-data-science).
